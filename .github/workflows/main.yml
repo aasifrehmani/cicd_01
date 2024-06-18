@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-  docker-login:
+  dockerlogin:
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -22,13 +22,13 @@ jobs:
         password: ${{ secrets.DOCKER_TOKEN }}
 
   testing:
-    needs: docker-login
+    needs: dockerlogin
     runs-on: ubuntu-latest
     steps:
     - run: ls
 
-  docker-push:
-    needs: docker-login
+  dockerpush:
+    needs: dockerlogin
     runs-on: ubutu-latest
     steps:
     - uses: docker/build-push-action@v4
