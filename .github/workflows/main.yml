@@ -22,6 +22,7 @@ jobs:
         password: ${{ secrets.DOCKER_TOKEN }}
 
   testing:
+    needs: docker-login
     runs-on: ubuntu-latest
     steps:
     - run: ls
