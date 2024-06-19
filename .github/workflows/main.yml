@@ -20,13 +20,7 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_TOKEN }}
-
-  testing:
-    needs: dockerlogin
-    runs-on: ubuntu-latest
-    steps:
-    - run: ls
-
+        
   dockerpush:
     needs: dockerlogin
     runs-on: ubutu-latest
