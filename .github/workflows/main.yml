@@ -23,4 +23,4 @@ jobs:
     - uses: docker/build-push-action@v4
       with:
         push: true
-        tags: asifrehmani/carville:$GITHUB_RUN_ATTEMPT
+        tags: asifrehmani/carville:v3.0
