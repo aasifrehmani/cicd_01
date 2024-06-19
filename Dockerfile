@@ -1,4 +1,4 @@
-FROM ubuntu-latest
+FROM ubuntu
 COPY . .
 RUN apt-get update
 
